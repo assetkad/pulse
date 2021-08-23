@@ -8,6 +8,9 @@
       width: 100%;
     }
   }
+  &__wrapper_hidden {
+    display: none;
+  }
   &__official {
     font-weight: 500;
     font-size: 12px;
