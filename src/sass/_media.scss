@@ -44,10 +44,25 @@
       max-width: 225px;
     }
   }
+  .title_left {
+    font-size: 34px;
+  }
+  .consultation {
+    min-height: 635px;
+    padding: 80px 0 90px;
+  }
 }
 @media (max-width: 925px) {
   .container {
     max-width: 800px;
+  }
+  .title_left {
+    font-size: 30px;
+  }
+  .consultation {
+    &__descr {
+      font-size: 19px;
+    }
   }
 }
 @media (max-width: 840px) {
@@ -61,7 +76,24 @@
     max-width: 700px;
   }
   .promo {
+    min-height: 504px;
     background: url(../img/main.jpg) 19% top/cover no-repeat;
+    &__wrapper {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__header {
+      font-size: 32px;
+    }
+    &__subheader {
+      font-size: 17px;
+      margin-top: 0px;
+    }
+    &__icons {
+      margin-top: 30px;
+    }
   }
   .header {
     display: flex;
@@ -91,30 +123,11 @@
       display: none;
     }
   }
-  .promo {
-    min-height: 504px;
-    &__wrapper {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    &__header {
-      font-size: 32px;
-    }
-    &__subheader {
-      font-size: 17px;
-      margin-top: 0px;
-    }
-    &__icons {
-      margin-top: 30px;
-    }
-    .button_main {
-      margin-top: 35px;
-      width: 255px;
-      height: 40px;
-      font-size: 14px;
-    }
+  .button_main {
+    margin-top: 35px;
+    width: 255px;
+    height: 40px;
+    font-size: 14px;
   }
   .xs {
     display: none;
@@ -143,14 +156,28 @@
       margin-top: 5px;
     }
   }
+  .title_left {
+    text-align: center;
+    font-size: 20px;
+  }
+  .consultation {
+    min-height: 585px;
+    padding: 70px 0 90px;
+    background: url("../img/consultation.jpg") 42% top/cover no-repeat;
+    &__descr {
+      font-size: 19px;
+      text-align: center;
+    }
+  }
+  .feed-form {
+    margin: 0 auto;
+    margin-top: 36px;
+  }
 }
 @media (max-width: 575px) {
   .promo {
     background: url(../img/main.jpg) 19% top/cover no-repeat;
     min-height: 300px;
-    &__wrapper {
-      margin-top: 20px;
-    }
     &__icons {
       display: none;
     }
@@ -205,8 +232,19 @@
     &__subtitle {
       font-size: 16px;
     }
+  }
+  .title_left {
+    font-size: 18px;
+  }
+  .consultation {
     &__descr {
-      font-size: 12px;
+      font-size: 17px;
     }
+  }
+  .feed-form {
+    width: 270px;
+  }
+  .button_submit {
+    font-size: 14px;
   }
 }
