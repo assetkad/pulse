@@ -5,7 +5,6 @@ const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
-// Static server
 gulp.task('server', function() {
 
     browserSync({
@@ -14,15 +13,13 @@ gulp.task('server', function() {
         }
     });
 
+    gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {
     return gulp.src("src/sass/**/*.+(scss|sass)")
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(rename({
-            prefix: '',
-            suffix: '.min',
-        }))
+        .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("src/css"))
