@@ -51,6 +51,16 @@
     min-height: 635px;
     padding: 80px 0 90px;
   }
+  .carousel {
+    &__inner {
+      max-width: calc(100% - 216px);
+      div {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 925px) {
   .container {
@@ -173,8 +183,22 @@
     margin: 0 auto;
     margin-top: 36px;
   }
+  .carousel {
+    &__inner {
+      max-width: calc(100% - 120px);
+    }
+    .slick-prev {
+      left: -60px;
+    }
+    .slick-next {
+      right: -60px;
+    }
+  }
 }
 @media (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
   .promo {
     background: url(../img/main.jpg) 19% top/cover no-repeat;
     min-height: 300px;
@@ -247,4 +271,67 @@
   .button_submit {
     font-size: 14px;
   }
+  .carousel {
+    display: flex;
+    align-items: center;
+    &__inner {
+      max-width: 100%;
+      padding: 0;
+    }
+    .slick-prev {
+      visibility: hidden;
+    }
+    .slick-next {
+      visibility: hidden;
+    }
+    .slick-dots {
+      margin-top: 30px;
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      list-style-type: none;
+      li:before,
+      li.slick-active:before {
+        content: "";
+        text-align: center;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        opacity: 0.6;
+        background-color: $main-color;
+      }
+      li.slick-active:before {
+        opacity: 1;
+      }
+      button {
+        visibility: hidden;
+      }
+    }
+  }
+  .slcik-slide {
+    width: 404px;
+    img {
+      width: 100%;
+    }
+  }
 }
+
+// @media (max-width: 431px) {
+//   .container {
+//     max-width: 500px;
+//   }
+//   .carousel {
+//     padding: 0;
+//     display: flex;
+//     flex: none;
+//     min-height: 80vh;
+//     &__inner {
+//       max-width: 100%;
+//     }
+//   }
+//   .slick-slide {
+//     width: 450px;
+//   }
+// }

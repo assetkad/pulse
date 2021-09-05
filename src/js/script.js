@@ -4,12 +4,22 @@ $(document).ready(function () {
         // adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="icons/left.png"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icons/right.png"></button>',
+        autoplay: false,
         responsive: [
             {
-                breakpoint: 992,
+                // breakpoint: 992,
+                // settings: {
+                //     dots: true,
+                //     arrows: false
+                // }
+            },
+            {
+                breakpoint: 575,
                 settings: {
-                    dots: true,
-                    arrows: false
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
                 }
             }
         ]

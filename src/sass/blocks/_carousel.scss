@@ -2,8 +2,11 @@
   padding: 81px 0;
   &__inner {
     position: relative;
-    width: 750px;
+    width: 760px;
     margin: 0 auto;
+    img {
+      max-width: 100%;
+    }
   }
   .slick-prev,
   .slick-next {
