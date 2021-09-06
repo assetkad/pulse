@@ -1,9 +1,9 @@
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .container {
     max-width: 950px;
   }
 }
-@media (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .container {
     max-width: 900px;
   }
@@ -62,7 +62,7 @@
     }
   }
 }
-@media (max-width: 925px) {
+@media only screen and (max-width: 925px) {
   .container {
     max-width: 800px;
   }
@@ -75,13 +75,13 @@
     }
   }
 }
-@media (max-width: 840px) {
+@media only screen and (max-width: 840px) {
   .container {
     max-width: 750px;
   }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: 700px;
   }
@@ -194,10 +194,20 @@
       right: -60px;
     }
   }
+  .catalog {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
 }
-@media (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   .container {
     width: 100%;
+  }
+  .title {
+    font-size: 20px;
   }
   .promo {
     background: url(../img/main.jpg) 19% top/cover no-repeat;
@@ -316,22 +326,47 @@
       width: 100%;
     }
   }
-}
+  .catalog {
+    &__tabs {
+      margin-top: 32px;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+    }
+    &__tab {
+      width: 80%;
+      margin-top: 10px;
+      transition: none;
+      font-size: 10px;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-item {
+      width: 270px;
+    }
+  }
 
-// @media (max-width: 431px) {
-//   .container {
-//     max-width: 500px;
-//   }
-//   .carousel {
-//     padding: 0;
-//     display: flex;
-//     flex: none;
-//     min-height: 80vh;
-//     &__inner {
-//       max-width: 100%;
-//     }
-//   }
-//   .slick-slide {
-//     width: 450px;
-//   }
-// }
+  .feed {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+      margin-top: 20px;
+      margin-left: 25px;
+      padding-right: 20px;
+    }
+    &__subtitle,
+    &__score,
+    &__descr {
+      text-align: center;
+    }
+  }
+}
