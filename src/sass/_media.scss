@@ -369,4 +369,21 @@
       text-align: center;
     }
   }
+  .footer {
+    &__info {
+      width: 320px;
+    }
+    &__addr {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    &__social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__social-item {
+      margin: 0 0 0 0;
+    }
+  }
 }
