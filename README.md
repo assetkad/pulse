@@ -1,1 +1,3 @@
-# It's my serious project. Here how you can see I training. Learn new skills and practice it. Letttt'ssss gooooo!
+# Project Pulse. Here I used more technologies. 
+# For the start. You need to install 'npm packet'
+# open the terminal and write it down 'npm i'
